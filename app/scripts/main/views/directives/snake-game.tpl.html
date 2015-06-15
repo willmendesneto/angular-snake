@@ -1,0 +1,18 @@
+<div id="game-container" commands snake="mainCtrl.snake">
+  <div class="snake-game-background">
+      <div class="" ng-repeat="column in mainCtrl.board">
+          <div class="column"
+              ng-class="{fruit: mainCtrl.addClassInTarget($parent.$index, $index)}"
+              ng-style="{'background-color': mainCtrl.setStyling($parent.$index, $index)}"
+              ng-repeat="row in column track by $index"
+          >
+            <span ng-if="mainCtrl.addClassInTarget($parent.$index, $index)" >
+              <div class="column-target"></div>
+            </span>
+          </div>
+      </div>
+  </div>
+  <button id="start-game" class="btn btn-lg"
+      ng-disabled="mainCtrl.gameStarted === true"
+      ng-click="mainCtrl.startGame()">Start Game</button>
+</div>

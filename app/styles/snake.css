@@ -1,0 +1,71 @@
+#game-container, #past-scores {
+	width: 600px;
+	float: left;
+}
+
+.row {
+	height: 26px;
+}
+
+.column {
+	border: 1px solid transparent;
+	width: 24px;
+  height: 24px;
+	margin: 1px;
+
+	margin-bottom: -5px;
+	display: inline-block;
+}
+.column.fruit{
+	background-color: rgb(232, 5, 5);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.column-target {
+  border: 3px solid #999;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+	height: 40px;
+  width: 40px;
+
+  position: absolute;
+	-webkit-animation: pulsate 1s ease-out;
+  animation: pulsate 1s ease-out;
+	-webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  opacity: 0.0;
+  margin-left: -9px;
+  margin-top: -9px;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.snake-game-background {
+	background: #222;
+  background: radial-gradient(#333, #111);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font: 100%/1.5 sans-serif;
+  overflow: hidden;
+  width: 520px;
+}
+
+#start-game {
+	width: 120px;
+	padding: 10px;
+	margin-top: 5px;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+#start-game:hover {
+	color: red;
+	cursor: pointer;
+}
