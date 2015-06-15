@@ -158,6 +158,8 @@
       this.gameStarted = true;
       this.resetFruit();
       this.update();
+
+      alert('Clicked!');
     };
 
     /**
