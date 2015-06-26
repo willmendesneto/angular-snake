@@ -392,13 +392,35 @@ module.exports = function (grunt) {
         dotfiles: true
       },
       src: '**/*'
-    }
+    },
+    html2js: {
+      options: {
+        base: 'app',
+        module: 'myApp.templates',
+        singleModule: true,
+        useStrict: true,
+        htmlmin: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        }
+      },
+      main: {
+        src: ['<%= yeoman.app %>/scripts/*/views/**/*.html'],
+        dest: '<%= yeoman.app %>/scripts/templates.to.js'
+      },
+    },
   });
 
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'browserSync']);
     }
 
     grunt.task.run([
@@ -406,8 +428,9 @@ module.exports = function (grunt) {
       'bower-install',
       'concurrent:server',
       'autoprefixer',
+      'html2js:main',
       'browserSync',
-      'connect:livereload',
+      //'connect:livereload',
       'watch'
     ]);
   });
@@ -421,6 +444,7 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'autoprefixer',
+    'html2js:main',
     'connect:test',
     'karma'
   ]);
@@ -441,6 +465,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+    'html2js:main',
     'concat',
     'ngmin',
     'copy:dist',

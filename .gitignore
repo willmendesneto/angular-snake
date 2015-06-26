@@ -2,6 +2,7 @@ node_modules
 dist
 coverage
 .tmp
+.grunt
 .sass-cache
 app/bower_components
 npm-debug.log

@@ -4,7 +4,8 @@
   angular.module('snakeGameApp', [
     'ngRoute',
     'keepr',
-    'ngTouch'
+    'ngTouch',
+    'myApp.templates'
   ])
   .config(function ($routeProvider) {
     $routeProvider
