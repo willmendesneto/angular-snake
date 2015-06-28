@@ -1,5 +1,6 @@
 node_modules
 dist
+app/scripts/templates.to.js
 coverage
 .tmp
 .grunt
