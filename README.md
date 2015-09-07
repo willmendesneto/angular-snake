@@ -2,8 +2,7 @@
 
 > Vintage Snake game built with angular
 
-Example [http://willmendesneto.github.io/angular-snake][http://willmendesneto.github.io/angular-snake/#/]
-
+Example: http://willmendesneto.github.io/angular-snake
 
 ## How to Use
 
