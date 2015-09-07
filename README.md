@@ -1,27 +1,16 @@
-# Punch Clock
+# Angular Snake
 
-Build a punch clock system using AngularJS.
+> Vintage Snake game built with angular
 
-## Goals
-
-By dojo learn the AngularJS building a punch clock system.
-The system should register when the user start to work and when she/he end the work.
-
-## Phases
-
-1 - Register hour of start and end.
-
-2 - Show how much was worked during one day with hour of start and end.
+Example [http://willmendesneto.github.io/angular-snake][http://willmendesneto.github.io/angular-snake/#/]
 
 
-## Start to develop
-
-### How to Use
+## How to Use
 
 1 - Clone this repository and access the generated folder
 
 ```bash
-$ git clone git@github.com:dojorecifetw/punch-clock-angular-js.git [project-name]
+$ git clone git@github.com:willmendesneto/angular-snake.git [project-name]
 $ cd [project-name]
 ```
 
@@ -42,7 +31,7 @@ It's necessary run `npm install -g grunt-cli`. This provide the command grunt.
 $ grunt serve
 ```
 
-After this, access http://localhost:9000 for use this app
+After this, access http://localhost:3000 for use this app
 
 4 - Run application tests
 ```bash
@@ -77,21 +66,17 @@ $ grunt serve:dist
 
 This project use (actually globally):
 
-###Ruby
-- ```sass``` and ```compass``` for stylesheets;
-
-###NodeJS
+### NodeJS
 - ```karma``` like test runner;
 - ```protractor``` for e2e tests;
 - ```grunt-cli``` for run grunt commands in CLI;
 - ```bower``` like package manager for the web;
-- ```yo``` and ```generator-angular``` for code/scaffolding generator;
 - ```jshint``` for lint script files;
 
-###Frontend
+### Frontend
 
 All list of frontend dependencies are in ```bower.json``` file.
 
-###Backend
+### Backend
 
 All list of backend dependencies are in ```package.json``` file.
